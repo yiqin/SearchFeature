@@ -17,7 +17,7 @@ public class SearchResultsActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_results);
+        // setContentView(R.layout.activity_search_results);
 
         handleIntent(getIntent());
     }
