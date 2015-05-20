@@ -59,11 +59,9 @@ public class SearchResultsActivity extends Activity {
             ArrayList<String> places = new ArrayList<>();
             Collections.addAll(places, getResources().getStringArray(R.array.places_array));
             if(places.contains(query)) {
-                // Toast.makeText(getApplicationContext(), "Found",
-                       // Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Found", Toast.LENGTH_LONG).show();
             } else {
-                // Toast.makeText(getApplicationContext(), "Not Found",
-                        // Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Not Found", Toast.LENGTH_LONG).show();
             }
         }
 
