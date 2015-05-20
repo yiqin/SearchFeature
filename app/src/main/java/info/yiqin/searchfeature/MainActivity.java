@@ -32,8 +32,6 @@ public class MainActivity extends ActionBarActivity {
                 (SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setSearchableInfo(
                 searchManager.getSearchableInfo(getComponentName()));
-        searchView.setIconifiedByDefault(false);
-
 
         return true;
     }
@@ -43,16 +41,18 @@ public class MainActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         switch (id) {
             case R.id.search:
-                // onSearchRequested();
+
+                onSearchRequested();
 
                 return true;
             case R.id.action_settings:
-                // finish();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
