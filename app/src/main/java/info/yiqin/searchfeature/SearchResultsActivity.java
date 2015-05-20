@@ -20,9 +20,6 @@ public class SearchResultsActivity extends Activity {
         setContentView(R.layout.activity_search_results);
 
         handleIntent(getIntent());
-
-        Toast.makeText(getApplicationContext(), "Found",
-                Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -34,8 +31,6 @@ public class SearchResultsActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_search_results, menu);
-
-
 
         return true;
     }
@@ -61,15 +56,14 @@ public class SearchResultsActivity extends Activity {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             //use the query to search your data somehow
-
             ArrayList<String> places = new ArrayList<>();
             Collections.addAll(places, getResources().getStringArray(R.array.places_array));
             if(places.contains(query)) {
-                Toast.makeText(getApplicationContext(), "Found",
-                        Toast.LENGTH_LONG).show();
+                // Toast.makeText(getApplicationContext(), "Found",
+                       // Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(getApplicationContext(), "Not Found",
-                        Toast.LENGTH_LONG).show();
+                // Toast.makeText(getApplicationContext(), "Not Found",
+                        // Toast.LENGTH_LONG).show();
             }
         }
 

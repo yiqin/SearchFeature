@@ -32,7 +32,7 @@ public class MainActivity extends ActionBarActivity {
                 (SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setSearchableInfo(
                 searchManager.getSearchableInfo(getComponentName()));
-        searchView.setIconifiedByDefault(true);
+        searchView.setIconifiedByDefault(false);
 
 
         return true;
@@ -46,9 +46,9 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        switch (item.getItemId()) {
+        switch (id) {
             case R.id.search:
-                onSearchRequested();
+                // onSearchRequested();
 
                 return true;
             case R.id.action_settings:
